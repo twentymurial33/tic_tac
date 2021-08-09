@@ -20,6 +20,14 @@
   justify-content: center;
 }
 
+.grid-item:hover {
+  background-color: white;
+}
+
+.grid-item:active {
+  background-color: darkgray;
+}
+
 h1 {
   text-align: center;
   font-size: 40px;
@@ -36,3 +44,4 @@ button {
 body {
   background-color: azure;
 }
+
