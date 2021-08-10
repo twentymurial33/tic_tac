@@ -21,6 +21,14 @@
   cursor: pointer;
 }
 
+.grid-item:hover {
+  background-color: white;
+}
+
+.grid-item:active {
+  background-color: darkgray;
+}
+
 h1 {
   text-align: center;
   font-size: 40px;
@@ -50,3 +58,4 @@ body {
   background-color: azure;
   background-image: url("tic_tac_toe_game-wallpaper-960x600.jpg");
 }
+
