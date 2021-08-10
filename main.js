@@ -1,8 +1,18 @@
-//if you get 3 in a row then you win
-// players have 9 squares
-// 2 players are playing the game
+// Pseudo coding to give us structure
 
-//Global Variables
+// storing results in a variable
+const result = document.querySelector("#results");
+
+//Player -  a string
+let currentPlayer = "X";
+let squares = ["", "", "", "", "", "", "", "", ""];
+
+//displaying end results
+function endGame() {
+  let winner = result.textContent;
+}
+endGame();
+// result validation
 let winConditions = [
   [0, 1, 2],
   [3, 4, 5],
@@ -13,18 +23,27 @@ let winConditions = [
   [2, 5, 8],
   [2, 4, 6],
 ];
-let squareCount = 9;
-let squares = "";
-let gameOver = false;
-let result = document.getElementById("results");
-
-//functions
-
-function myFunc() {}
-
-function endGame() {
-  let winner = result.textContent;
-  console.log(winner);
+//using the above winConditions we created
+function resultValidation() {
+  let winningAlways = false;
+  for (let i = 0; i < 7; i++) {
+    const setConditions = winConditions[i];
+    let a = squares[setConditions[0]];
+    let b = squares[setConditions[1]];
+    let c = squares[setConditions[2]];
+    if (a === b && b == c) {
+      console.log("round won");
+    } else if (a == !b || b == !c) {
+      console.log("round lost");
+    } else {
+      console.log("round lost");
+    }
+  }
 }
 
-endGame();
+resultValidation();
+
+function myReset() {
+  let gameActive = true;
+  console.log("You clicked me");
+}
